@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Ultimate</title>
+		<link type="text/css" href="css/ui-lightness/jquery-ui-1.8.20.custom.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.20.custom.min.js"></script>
+		<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+
+				// prevent users from dragging the page
+				//
+				var preventDefaultScroll = function(e) {
+					e.preventDefault();
+					window.scroll(0,0);
+					return false;
+				};
+
+				document.addEventListener('touchmove', preventDefaultScroll, false);
+
+				$( "div" ).draggable({ containment: "parent", scroll: false });
+
+			});
+		</script>
+		<style type="text/css">
+			body
+			{
+				background-color: #212121;
+			}
+
+			.x,
+			.o
+			{
+				max-height: 10%;
+				max-width: 10%;
+				height: 80px;
+				width: 80px;
+				-webkit-border-radius: 40px;
+				-moz-border-radius: 40px;
+				border-radius: 40px;
+				margin: 2%;
+				float: left;
+			}
+
+			.x
+			{
+				background-color: #2192bf;
+			}
+
+			.o
+			{
+				background-color: #f28705;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="x"></div>
+		<div class="x"></div>
+		<div class="x"></div>
+		<div class="x"></div>
+		<div class="x"></div>
+		<div class="x"></div>
+		<div class="x"></div>
+		<div class="o"></div>
+		<div class="o"></div>
+		<div class="o"></div>
+		<div class="o"></div>
+		<div class="o"></div>
+		<div class="o"></div>
+		<div class="o"></div>
+	</body>
+</html>
+
+
